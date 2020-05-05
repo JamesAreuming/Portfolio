@@ -1,4 +1,4 @@
-	/* ¸ðµç »óÈ²¿¡¼­ ¶È°°ÀÌ »ç¿ëÇÒ ½ºÅ¸ÀÏ */
+	/* ëª¨ë“  ìƒí™©ì—ì„œ ë˜‘ê°™ì´ ì‚¬ìš©í•  ìŠ¤íƒ€ì¼ */
 	*{
 		margin: 0;
 		padding: 0;
@@ -6,190 +6,215 @@
 	body{
 		background: #fff;
 	}
-	/* ¸ð¹ÙÀÏ -767px ÀÌÇÏ */
 	#container{
 		width: 100%;
 	}
-	header{
-		width: 100%;
-		height: 780px;
-		background: url("../images/main_background.jpg") center no-repeat;
-		background-size: cover;
-		margin: 0;
-		position: relative;
+	div#main_title h5, h1, div#main_intro p, div#view_more em a{
+		color: white;
 	}
-	div#mobile_logo{
-		width: 100%;
-		height: 60px;
-		background: #fff;
-		position: fixed;
+	p.main_name{
+		font-size: 50px;
+		font-weight: bold;
+		color: black;
+		font-family: 'Playball';
+		letter-spacing: 3px;
+		padding-top: 100px;
+		padding-bottom: 30px;
 	}
-	div#mobile_logo img{
-		padding: 6px 0 0 20px;
+	p.line{
+		border-bottom: 5px solid black;
+		width: 100px;
+		height: 10px;
+		margin: 0 auto;	
 	}
-	button#mobile_toggle{
-		width: 25px;
-		height: 25px;
-		background: #fff;
-		border: none;
-		position: absolute;
-		right:25px;
-		top: 15px;
-	}
-	button#mobile_toggle:focus{
-		outline: none;
-	}
-	button#mobile_toggle hr{
-	    border:none;
-		border-bottom: 2px solid black;
-		padding: 3px 3px;
-	}
-	div#main_img{
-		text-align: center;
-		padding: 80px 0 5px; 
-	}
-	div#main_img img{
-		width: 340px;
-		height: 240px;
-	}
-	div#main_text{
-		height: 290px;
-		padding: 0 15px;
-		color: #fff;
-		font-family: 'Raleway';
-	}
-	div#main_title h1{
-		font-size: 40px;
-		margin: 10px 0;
-		font-weight: normal;
-	}	
-	div#main_intro span{
-		font-size: 14px;
-	}
-	div#view_more{
-		margin-top: 10px;
-		padding: 0 15px 30px;
-		color: #fff;
-	}
-	div#view_more em{
-		font-size: 18px;
-		font-family: 'Playfair Display';
-	}	
-	div#mobile_footer{
-		background: #fff;
-		height: 150px;
-	}
-	div#mobile_footer table{
-		width: 100%;
-		text-align: center;
-		background: #EAEAEA;
-		font-size: 12px;
-	}
-	div#mobile_footer table td{
-		padding: 10px 0;
-		
-	}
-	div#mobile_footer p{
-		font-size: 12px;
-		padding: 7px 0 0;
-	}		
-	div#mobile_footer table strong{
-		font-size: 15px;
-	}
-	/* ¼û±â±â */
-	nav#pc_menu, #about, #projects, #contact, footer{
-		display: none;
-	}
- 	/* ÅÂºí¸´ : 768pxÀÌ»ó */
-	@media screen and (min-width:768px){
-	}
-	/* PC : 992px ÀÌ»ó */
-	@media screen and (min-width:992px){
+	
+	/*** PC ***/
+	@media screen and (min-width:1024px){
+	    /** header **/
+	    
 		header{
 			width: 100%;
-			height: 900px;
-		}
-		nav#pc_menu, #about, #projects, #contact, footer{
-			display: block;
+			height: 930px;
+			background: url("../images/main_background.jpg") center no-repeat;
+			background-size: cover;			
 		}
 		
-		nav#pc_menu{
-			text-align: center;
-			background: #fff;
+		/* header>ë¡œê³ +ë©”ë‰´ */
+		header div#head_wrap{
 			width: 100%;
-			height: 90px;
+			height: 100px;
+			background: white;
+			position: fixed;
 		}
-		nav#pc_menu ul{
+		header div#h_head{
+			width: 80%;
+			height: 100px;
+			margin: 0 auto;
+		}
+		div#h_logo{
+			width: 200px;
+			height: 100px;
+			float: left;		
+		}
+		div#h_logo img{
+			width: 192px;
+			height: 75px;
+			padding: 10px;		
+		}		
+		nav#h_menu{
+			width: 600px;
+			height: 100px;
+			float: right;
+			text-align: right;
+			line-height: 100px;
+		}
+		nav#h_menu ul{
 			list-style: none;
 		}
-		nav#pc_menu li{
+		nav#h_menu li{
 			display: inline-block;
 			margin: 0 30px;
-			font-size: 12px;
+			font-size: 16px;
 			font-weight: bold;
 			font-family: 'Raleway';
 		}
-		nav#pc_menu li:first-child{
-			margin-left: 50px;
-			margin-right: 50%;
-			padding: 15px 0 0;
-		}
-		nav#pc_menu a{
+		nav#h_menu a{
 			text-decoration: none;
 			color: black;
 		}
-		div#wrap{
-			text-align: center;
+		nav#h_menu a:hover{
+			border-bottom: 3px solid black;
 		}
+		
+		/* header>ë©”ì¸ì´ë¯¸ì§€+ì†Œê°œê¸€ */		
+		div#intro_wrap{
+ 			width: 80%;
+			height: 830px;
+			margin: 0 auto;
+		}
+		
+		/* â†’ ë©”ì¸ì´ë¯¸ì§€ */
 		div#main_img{
+			width: 45%;
+			height: 577px;
 			float: left;
-			padding: 200px 10px 10px 50px;
+			padding-top: 250px;
 		}
 		div#main_img img{
 			width: 688px;
 			height: 452px;
 		}
+		
+		/* â†’ ë©”ì¸ì†Œê°œê¸€ */
 		div#main_text{
-			padding: 200px 30px 10px 0;
+			width: 45%;
+			height: 830px;
+			float: right;
+			text-align: left;
+		}
+		div#main_title{
+			width: 100%;
+			height: 200px;
+			padding-top: 290px;	
 		}
 		div#main_title h5{
+			width: 100%;
 			font-size: 15px;
-			font-family: 'Raleway';
-			padding-left: 780px;
+			font-family: 'Raleway';		
 		}
 		div#main_title h1{
+			width: 100%;
 			font-size: 73px;
 			font-family: 'Raleway';
 			font-weight: normal;
 			margin: 20px 0 0;
+		}		
+		div#main_intro{
+			width: 100%;
 		}
 		div#main_intro p{
+			width: 100%;
 			font-size: 18px;
 			padding-top: 30px;
 			font-family: 'Raleway';
 		}		
 		div#main_intro span{
 			font-size: 13px;
-		}
+		}		
 		div#view_more{
-			padding: 130px 0 0 0;
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
 		}
 		div#view_more em{
 			font-size: 18px;
 			font-family: 'Playfair Display';
 		}
+		div#view_more em a{
+			text-decoration: none;
+		}
+		
+		/** section **/		
 		section{
+			width: 100%;
 			text-align: center;
+			border: 1px solid red;
 		}
-		.main_name{
-			font-size: 40px;
-			font-family: 'Playball';
+		h1.main_name{
+			font-size: 40px;			
 		}
-		footer{
-			text-align: center;
+		
+		/* section>about */
+		section div#about{
+			width: 100%;
+			height: 1600px;
+			border: 5px solid green;
+		}
+		section div#about div#about1{
+			width: 100%;
+			height: 500px;
+			padding-top: 100px;
+			border: 1px solid yellow;
+		}			
+		section div#about div#about2{
+			width: 100%;
+			height: 1000px;
+			background-color: #f3f3f3;
+			border: 1px solid red;
+		}
+		section div#about div#about2 div.bx-wrapper{
+			margin: 0 auto;
+			border: 1px solid red;			
 		}		
-		/* ¼û±â±â */
-		div#mobile_logo, div#mobile_footer{
-			display: none;
+		
+		/* section>project */
+		section div#projects{
+			width: 100%;
+			height: 1000px;	
+			border: 5px solid green;		
 		}
+		/* section>contact */
+		section div#contact{
+			width: 100%;
+			height: 1000px;
+			background-color: #f3f3f3;
+			border: 5px solid green;		
+		}
+
+		
+		/** footer **/	
+		footer{
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+		}	
+	}
+	
+	/*** TABLET ***/
+	@media screen and (min-width:768px) and (max-width:1023px){
+	}
+		
+	/*** MOBILE ***/
+	@media screen and (max-width:640px){
 	}
