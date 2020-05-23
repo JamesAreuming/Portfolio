@@ -8,22 +8,42 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script>
-$(function(){
-	  $('.bxslider').bxSlider({
-		  auto: true,
-		  speed: 500,
-		  pause: 4000,
-		  mode: 'fade',
-		  pager: true,
-		  slideWidth: 1131,
-		  });
+	//메인이미지 로테이션
+ 	var i = 1;
+ 	function changeImage() {
+		var array = ["main_img1.png","main_img2.png"];
+		var img = $("<img>").attr("src","images/"+array[i%array.length]); // [1],[0]
+		$(".main_img").html(img);
+		$(img).css({"opacity": "0"}).animate({"opacity":"1"},4000,function(){
+			$(img).css({"opacity": "1"}).animate({"opacity":"0"},4000);
+		})
+		i++;
+	} 
+
+$(function(){	  
+	//메인이미지 로테이션
+	  $("#mImg").css({"opacity": "1"}).animate({"opacity":"0"},4000);
+	  setInterval("changeImage()",4000);
 	  
+	  //메뉴 스크롤	  
 	  $("#h_menu li a").click(function(){
 		  $('html, body').animate({
 		  scrollTop: $( $.attr(this, 'href') ).offset().top
 		  }, 1000);
 		  return false;
-		  });	  
+		  });
+	  
+	  //bx 슬라이더
+	  $('.bxslider').bxSlider({
+		  auto: true,
+		  speed: 300,
+		  pause: 4000,
+		  /* mode: 'fade', */
+		  pager: true,
+		  slideWidth: 1131,
+		  });
+	  
+
 	})
 </script>
 <link rel="stylesheet" href="css/style.css">
@@ -54,8 +74,8 @@ $(function(){
 				
 				<!-- 메인이미지 & 소개글 -->
 				<div id="intro_wrap">
- 					<div id="main_img">
-						<img src = "images/main_img.png">
+ 					<div class="main_img">					
+					   <img src = "images/main_img1.png" id="mImg">
 					</div>
  					<div id="main_text">
 						<div id="main_title">
@@ -93,10 +113,10 @@ $(function(){
 				</div>
 				<div id="about2">
 					<div class="bxslider">
-						<div><img src="images/test1.PNG"></div>
-						<div><img src="images/test2.PNG"></div>
-						<div><img src="images/test3.PNG"></div>
-						<div><img src="images/test4.PNG"></div>
+						<div><img src="images/bx1.png"></div>
+						<div><img src="images/bx2.png"></div>
+						<div><img src="images/bx3.png"></div>		
+						<div><img src="images/bx4.png"></div>		
 					</div>
 				</div>
 			</div>
