@@ -15,14 +15,14 @@
 	p.main_name{
 		font-size: 50px;
 		font-weight: bold;
-		color: black;
+		color: #2C2C2C;
 		font-family: 'Playball';
 		letter-spacing: 3px;
 		padding-top: 100px;
 		padding-bottom: 30px;
 	}
 	p.line{
-		border-bottom: 5px solid black;
+		border-bottom: 4px solid #2C2C2C;;
 		width: 100px;
 		height: 10px;
 		margin: 0 auto;	
@@ -44,7 +44,16 @@
 			width: 100%;
 			height: 100px;
 			background: white;
+			position: fixed; /* 메뉴고정 */
+			left: 0;
+			top: 0;
+			z-index: 1; /* 최상위로 주기 */
+		}
+		
+		.sticky_header{
 			position: fixed;
+			left: 0;
+			top: 0;		
 		}
 		header div#h_head{
 			width: 80%;
@@ -94,16 +103,22 @@
 		}
 		
 		/* → 메인이미지 */
-		div#main_img{
-			width: 45%;
+		div.main_img{
+			width: 50%;
 			height: 577px;
 			float: left;
 			padding-top: 250px;
+			
 		}
-		div#main_img img{
+		div.main_img img[src*='main_img1']{
 			width: 688px;
 			height: 452px;
+			margin-left: 45px;
 		}
+		div.main_img img[src*='main_img2']{
+			width: 780px;
+			height: 452px;
+		}		
 		
 		/* → 메인소개글 */
 		div#main_text{
@@ -184,8 +199,13 @@
 		}
 		section div#about div#about2 div.bx-wrapper{
 			margin: 0 auto;
-			border: 1px solid red;			
-		}		
+			border: 1px solid red;
+			z-index: 0;	/* 하위요소 */		
+		}
+		section div#about div#about2 img[src*='bx']{
+			width: 1131px;
+			height: 553px;
+		}							
 		
 		/* section>project */
 		section div#projects{
