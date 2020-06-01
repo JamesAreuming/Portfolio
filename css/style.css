@@ -114,11 +114,9 @@
 			width: 688px;
 			height: 452px;
 			margin-left: 45px;
-		}
-		div.main_img img[src*='main_img2']{
-			width: 780px;
-			height: 452px;
-		}		
+			margin-top: 50px;
+			opacity: 0;
+		}	
 		
 		/* → 메인소개글 */
 		div#main_text{
@@ -143,7 +141,8 @@
 			font-family: 'Raleway';
 			font-weight: normal;
 			margin: 20px 0 0;
-		}		
+		}
+				
 		div#main_intro{
 			width: 100%;
 		}
