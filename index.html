@@ -7,23 +7,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<script>
-	//메인이미지 로테이션
- 	var i = 1;
- 	function changeImage() {
-		var array = ["main_img1.png","main_img2.png"];
-		var img = $("<img>").attr("src","images/"+array[i%array.length]); // [1],[0]
-		$(".main_img").html(img);
-		$(img).css({"opacity": "0"}).animate({"opacity":"1"},4000,function(){
-			$(img).css({"opacity": "1"}).animate({"opacity":"0"},4000);
-		})
-		i++;
-	} 
-
+<script> 
 $(function(){	  
-	//메인이미지 로테이션
-	  $("#mImg").css({"opacity": "1"}).animate({"opacity":"0"},4000);
-	  setInterval("changeImage()",4000);
+	//메인이미지 효과
+	$("#mImg").animate({"opacity":"1","marginTop":"10px"},2200);
+	 
+	 // setInterval("changeImage()",4000);
 	  
 	  //메뉴 스크롤	  
 	  $("#h_menu li a").click(function(){
@@ -32,6 +21,7 @@ $(function(){
 		  }, 1000);
 		  return false;
 		  });
+	  	  
 	  
 	  //bx 슬라이더
 	  $('.bxslider').bxSlider({
@@ -42,6 +32,8 @@ $(function(){
 		  pager: true,
 		  slideWidth: 1131,
 		  });
+	  
+	  
 	  
 
 	})
@@ -88,7 +80,7 @@ $(function(){
 								<br><br>
 								<span>
 								안녕하세요 이제 막 발을 내딛기 시작한 새내기 개발자 정아름입니다.<br>
-								제가 그동안 만들어 온 작업들을 보실 수 있는 포트폴리오입니다.<br>
+								제가 그동안 만들어 온 작업들을 보실 수 있는 <b>포트폴리오</b>입니다.<br>
 								즐겁게 감상해주세요!
 								</span> 
 							</p>
