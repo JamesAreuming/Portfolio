@@ -4,44 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JAMES AREUMING</title>
+<!-- jQuery 라이브러리 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- bx슬라이더 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!-- 폰트어썸 -->
+<script src="https://kit.fontawesome.com/6f2f0f2d95.js"></script>
 <script> 
 $(function(){	  
 	//메인이미지 효과
-	$("#mImg").animate({"opacity":"1","marginTop":"10px"},2200);
-	 
+	//$("#mImg").animate({"opacity":"1","marginTop":"10px"},2200);
+	  $("img#main_Img").animate({"opacity":"1"},6000);
 	 // setInterval("changeImage()",4000);
 	  
-	  //메뉴 스크롤	  
+	  //메뉴 스크롤	
 	  $("#h_menu li a").click(function(){
 		  $('html, body').animate({
 		  scrollTop: $( $.attr(this, 'href') ).offset().top
 		  }, 1000);
 		  return false;
+		  });	  
+	  
+	  //view more 클릭시 project 파트로 이동
+	  $("#view_more a").click(function(){
+		  $('html, body').animate({
+		  scrollTop: $( $.attr(this, 'href') ).offset().top
+		  }, 1000);
+		  return false;
 		  });
-	  	  
-	  
-	  //bx 슬라이더
-	  $('.bxslider').bxSlider({
-		  auto: true,
-		  speed: 300,
-		  pause: 4000,
-		  /* mode: 'fade', */
-		  pager: true,
-		  slideWidth: 1131,
-		  });
-	  
-	  
-	  
-
+	  	
+	 
+	//로딩시 실행
+	//
+	//로딩시 실행 	
+ 	$("ul.pointWrap li div").eq(0).removeClass("pointDummy").addClass("pointDummy_Border").animate({"opacity":1}, 1000, function(){
+ 		$("ul.pointWrap li div").eq(0).removeClass("pointDummy_Border").addClass("pointDummy").animate({"opacity":1},1000);
+ 	})	
+ 	
+ 	//로딩시 실행
+ 	$("ul.img_btns li").eq(0).removeClass("btnBox").addClass("btnBoxPoint_first").animate({"opacity":1}, 2000, function(){
+ 		$("ul.img_btns li").eq(0).removeClass("btnBoxPoint_first").addClass("btnBox").animate({"opacity":1},1000);
+ 	})	
 	})
 </script>
+<!-- 자바스크립트 -->
+<script type="text/javascript">
+
+	BannerChange();
+	function BannerChange(){
+		  $val = $(".bxImgWrap").attr("val");
+		  $mx = $(".bxImgWrap").attr("mx");
+		  $("#slide"+$val).fadeOut();
+		  
+			 if($val == $mx){
+				 $val = 1; //현재 이미지가 마지막 번호라면 1번으로 초기화 (5 == 5)
+			 }else{
+				 $val++;// 마지막 번호가 아니라면 번호를 증가
+			 }
+			 $("#slide"+$val).fadeIn();
+			 $(".bxImgWrap").attr('val',$val); // 변경된 이미지 영역의 번호를 속성값이 부여
+			 
+			setTimeout('BannerChange()', 3000); //3000 = 3초 뒤에 다시 함수 호출
+	}
+	
+
+			
+ 	point_change();
+	function point_change(){ 
+		 $val = $(".pointWrap").attr("val");
+		 $mx = $(".pointWrap").attr("mx");
+				 
+	 	if($val == $mx){
+	 		$val = 0;
+	 	}else{
+	 		$val++;
+	 	}
+		$("ul.pointWrap li div").eq($val).removeClass("pointDummy").addClass("pointDummy_Border").animate({"opacity":1}, 1000, function(){
+	 		$("ul.pointWrap li div").eq($val).removeClass("pointDummy_Border").addClass("pointDummy").animate({"opacity":1},1000);
+	 	})
+	 	$(".pointWrap").attr("val",$val);
+	 	setTimeout('point_change()', 3000);
+ 	} 
+	
+	btnBox_change();
+	function btnBox_change(){
+		 $val = $(".img_btns").attr("val");
+		 $mx = $(".img_btns").attr("mx");
+		 
+	 	if($val == $mx){
+	 		$val = 0;
+		 	$("ul.img_btns li").eq(0).removeClass("btnBox").addClass("btnBoxPoint_first").animate({"opacity":1}, 2000, function(){
+		 		$("ul.img_btns li").eq(0).removeClass("btnBoxPoint_first").addClass("btnBox").animate({"opacity":1},1000);
+		 	})
+	 	}else{
+	 		$val++;
+		 	$("ul.img_btns li").eq($val).removeClass("btnBox").addClass("btnBoxPoint_etc").animate({"opacity":1}, 2000, function(){
+		 		$("ul.img_btns li").eq($val).removeClass("btnBoxPoint_etc").addClass("btnBox").animate({"opacity":1},1000);
+		 	})
+	 	}
+
+	 	$(".img_btns").attr("val",$val);
+	 	setTimeout('btnBox_change()', 3000);
+	}
+</script>
+<!-- css -->
 <link rel="stylesheet" href="css/style.css">
-<style>
-@import url('https://fonts.googleapis.com/css?family=Playball|Playfair+Display|Raleway&display=swap');
-</style>
 </head>
 <body>
 	<div id="container">
@@ -51,6 +119,7 @@ $(function(){
 				<div id="head_wrap">
 					<div id = "h_head">
 						<div id="h_logo">
+							<!-- <a href="document/리눅스_2급시험자료.pdf" download="리눅스_2급시험자료.pdf"><img src="images/main_logo.png" title="클릭시 리눅스문서를 다운받을 수 있습니다"></a> -->
 							<a href="index.html"><img src="images/main_logo.png"></a>
 						</div>				
 						<nav id="h_menu">		
@@ -67,7 +136,7 @@ $(function(){
 				<!-- 메인이미지 & 소개글 -->
 				<div id="intro_wrap">
  					<div class="main_img">					
-					   <img src = "images/main_img1.png" id="mImg">
+					   <img src = "images/main_img1.png" id="main_Img">
 					</div>
  					<div id="main_text">
 						<div id="main_title">
@@ -87,7 +156,7 @@ $(function(){
 							<!-- project 연결 -->
 							<div id="view_more">
 		 						<img src = "images/viewpoint.png">
-								<em><a href="#">view more</a></em>
+								<em><a href="#projects">view more</a></em>
 							</div>
 						</div>
 					</div>			
@@ -102,14 +171,74 @@ $(function(){
 					<h6>x x	&nbsp;&nbsp;<b>A B O U T</b>&nbsp;&nbsp; x x</h6>
 					<p class="main_name">Areum Jeong</p>
 					<p class="line"></p>
+					<h1 id="slogan"><i>"노력은 절대 거짓말을 하지 않는다."</i></h1>
+					<ul class="pointWrap" val="0" mx="4">
+						<li>
+							<img src="images/point01.jpg" class="pointImg">
+							<div class="pointDummy"></div>
+						</li>
+						<li>
+							<img src="images/point02.jpg" class="pointImg">
+							<div class="pointDummy"></div>
+						</li>
+						<li>
+							<img src="images/point04.jpg" class="pointImg">
+							<div class="pointDummy"></div>
+						</li>
+						<li>
+							<img src="images/point03.jpg" class="pointImg">
+							<div class="pointDummy"></div>
+						</li>
+						<li>
+							<img src="images/point05.jpg" class="pointImg">
+							<div class="pointDummy"></div>
+						</li>
+					</ul>
 				</div>
+				<p class="aboutInfo">
+						대구여성인력개발센터와 대구여성IT 협회에서 개최한 <span class="blue"><b>'여성소프트웨어개발자 양성과정(2019.05.14~2019.07.22)'</b></span>에 입문하여<br>
+						<span class="red"><b>프로그래밍언어(JAVA)</b></span>와 <span class="green"><b>관련업체실습(응용SW프로그램 개발 업체)</b></span>을 경험하였습니다.<br>
+						약 3개월이라는 시간이 기술습득 & 취업에 부족함이 크다고 느껴져, 조금 더 전문적이고 자세히 배워보고자<br>
+						<span class="red"><b>'<u>영남인재교육원</u></span> - <span class="blue"><u>JAVA기반 스마트 웹&컨텐츠 응용SW 전문가과정(2019.10.18~2020.06.02)</u></b></span>을<br>
+						약 7개월동안 평일 & 주말도 상관없이 열심히 공부하여 수료하였습니다. 
+					</p>
 				<div id="about2">
-					<div class="bxslider">
-						<div><img src="images/bx1.png"></div>
-						<div><img src="images/bx2.png"></div>
-						<div><img src="images/bx3.png"></div>		
-						<div><img src="images/bx4.png"></div>		
-					</div>
+						<div class="proStudy">
+							<img src="images/html.png">
+							<img src="images/css.png">
+							<img src="images/js.png">
+							<img src="images/jq.png">
+						</div>
+						<div class="proStudy">
+							<img src="images/java.png">
+							<img src="images/ms.png">
+							<img src="images/gd.png">
+							<img src="images/mb.png">
+						</div>
+						<div class="proStudy">
+							<img src="images/git.png">
+							<img src="images/li.png">
+							<img src="images/sp.png">
+							<img src="images/at.png">
+						</div>												
+						<div class="lineWrap">
+							<span class="line">
+							</span>
+						</div>
+						<ul class="img_btns" val="0" mx="4">
+							<li class="btnBox">01</li>
+							<li class="btnBox">02</li>
+							<li class="btnBox">03</li>
+							<li class="btnBox">04</li>
+							<li class="btnBox">05</li>						
+						</ul>
+						<div class="bxImgWrap" val="1", mx="5">
+							<li id="slide5"><img src="images/bx1.png"></li>
+							<li id="slide4"><img src="images/bx2.png"></li>
+							<li id="slide3"><img src="images/bx3.png"></li>	
+							<li id="slide2"><img src="images/bx4.png"></li>
+							<li id="slide1"><img src="images/bx5.jpg"></li>
+						</div>	
 				</div>
 			</div>
 
@@ -117,6 +246,57 @@ $(function(){
 			<div id="projects">
 				<p class="main_name">Projects</p>
 				<p class="line"></p>
+				<div class="projects_container_A">
+					<div class="project_A project_swing">
+						<div class="A_dummy">
+							스윙프로젝트 PDF
+							스윙프로젝트 UI 설계서
+						</div>
+					</div>
+					<div class="project_B B_boxTop">
+						<div class="B_dummy">
+							<a href="http://java3-2.yi.or.kr/coffeemukka/user/" target="_blank">스프링프로젝트 바로가기</a>
+						</div>								
+					</div>
+					<div class="project_A project_jsp">	
+						<div class="A_dummy">
+							JSP프로젝트 PDF
+						</div>									
+					</div>
+					<div class="project_B B_boxLeft">
+						<div class="B_dummy">
+						</div>										
+					</div>
+					<div class="project_A project_spring">
+						<div class="A_dummy">
+							스프링프로젝트 PDF
+							스프링프로젝트 UI 설계서
+						</div>					
+					</div>
+					<div class="project_B B_boxRight">
+						<div class="B_dummy">
+							<a href="http://java3-2.yi.or.kr/swsales/main/main.do" target="_blank">JSP프로젝트 바로가기</a>
+						</div>										
+					</div>
+				</div>
+				<div class="projects_container_B">
+					<div class="project_C C_BoxLeft">
+						<div class="C_dummy">
+						</div>					
+					</div>
+					<div class="project_D D_BoxTop">
+						<div class="D_dummy">
+						</div>					
+					</div>
+					<div class="project_C C_BoxRight">
+						<div class="C_dummy">
+						</div>					
+					</div>
+					<div class="project_D D_BoxBottom">
+						<div class="D_dummy">
+						</div>					
+					</div>			
+				</div>				
 			</div>
 			
 			<!-- contact -->			
