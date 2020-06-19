@@ -71,22 +71,21 @@
 			top: 0;		
 		}
 		header div#h_head{
-			width: 80%;
+			width: 1350px;
 			height: 100px;
 			margin: 0 auto;
 		}
 		div#h_logo{
 			width: 200px;
-			height: 100px;
 			float: left;		
 		}
 		div#h_logo img{
 			width: 192px;
-			height: 75px;
+			height: 77px;
 			padding: 10px;		
 		}		
 		nav#h_menu{
-			width: 600px;
+			width: 510px;
 			height: 100px;
 			float: right;
 			text-align: right;
@@ -112,22 +111,22 @@
 		
 		/* header>메인이미지+소개글 */		
 		div#intro_wrap{
- 			width: 80%;
+ 			width: 1350px;
 			height: 830px;
 			margin: 0 auto;
 		}
 		
 		/* → 메인이미지 */
 		div.main_img{
-			width: 50%;
+			width: 675px;
 			height: 577px;
 			float: left;
 			padding-top: 250px;
 			
 		}
 		div.main_img img[src*='main_img1']{
-			width: 688px;
-			height: 452px;
+			width: 620px;
+			height: 430px;
 			margin-left: 45px;
 			margin-top: 10px;
 			opacity: 0;
@@ -136,7 +135,7 @@
 		
 		/* → 메인소개글 */
 		div#main_text{
-			width: 45%;
+			width: 610px;
 			height: 830px;
 			float: right;
 			text-align: left;
@@ -343,7 +342,7 @@
 			height: 2060px;			
 		}
 		section div#projects div.projects_container_A{
-			width: 70%;
+			width: 1333px;
 			height: 838px;
 			margin: 0 auto;
 			margin-top: 40px;		
@@ -355,7 +354,7 @@
 			float: left;
 		}
 		div.projects_container_A div.project_A{
-			width: 30%;
+			width: 399px;
 			height: 500px;
 			transition: ease-in-out .15s;	
 		}
@@ -386,7 +385,7 @@
 			transition:1s all ease; 
 		}	
 		div.projects_container_A div.project_B{
-			width: 30%;
+			width: 399px;
 			height: 250px;
 		}
 		div.B_boxTop{
@@ -394,11 +393,7 @@
 			background: url("../images/logo_01.png") no-repeat;
 			background-size: cover;	
 		}
-		div.B_boxTop img#goSpring{
-			width: 58%;
-			margin-right: 15px;
-			margin-top: 15px;
-		}
+
 		div.B_boxLeft{
 			/* background-color: #F7EDAF; */
 			background: url("../images/logo_02.png") no-repeat;
@@ -437,7 +432,7 @@
 			background-size: cover;
 		}
 		div.projects_container_B{
-			width: 70%;
+			width: 1333px;
 			height: 600px;
 			margin: 0 auto;		
 			/* background-color: gray; */
@@ -448,7 +443,7 @@
 			float: left;
 		}		
 		div.projects_container_B div.project_C{
-			width: 30%;
+			width: 399px;
 			height: 550px;
 		}
 		div.C_BoxLeft{
@@ -473,7 +468,7 @@
 			transition:1s all ease;			 	
 		}		
 		div.projects_container_B div.project_D{
-			width: 30%;
+			width: 399px;
 			height: 250px;		
 		}
 		div.D_BoxTop{
