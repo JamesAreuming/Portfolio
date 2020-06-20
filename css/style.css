@@ -14,9 +14,7 @@
 		text-decoration: none;
 		color: black;
 	}
-	#container{
-		width: 100%;
-	}
+
 	div#main_title h5, h1, div#main_intro p, div#view_more em a{
 		color: white;
 	}
@@ -50,10 +48,14 @@
 	.green{
 		color: #1D8B15;
 	}
+	
+	
 	/*** PC ***/
 	@media screen and (min-width:1024px){
 	    /** header **/
-	    
+	#container{
+		width: 100%;
+	}	    
 		header{
 			height: 940px;
 			background: url("../images/main_background.jpg");
@@ -611,9 +613,1127 @@
 	}
 	
 	/*** TABLET ***/
-	@media screen and (min-width:768px) and (max-width:1023px){
+	@media screen and (min-width:768px) and (max-width:1023px){	
+	#container{
+		width: 100%;
+	}	
+	    /** header **/
+	    
+		header{
+			height: 940px;
+			background: url("../images/main_background.jpg");
+			background-size: cover;		
+		}
+		
+		/* header>로고+메뉴 */
+		header div#head_wrap{
+			width: 100%;
+			height: 100px;
+			background: white;
+			position: fixed; /* 메뉴고정 */
+			left: 0;
+			top: 0;
+			z-index: 1; /* 최상위로 주기 */
+		}
+		
+		.sticky_header{
+			position: fixed;
+			left: 0;
+			top: 0;		
+		}
+		header div#h_head{
+			width: 1350px;
+			height: 100px;
+			margin: 0 auto;
+		}
+		div#h_logo{
+			width: 200px;
+			float: left;		
+		}
+		div#h_logo img{
+			width: 192px;
+			height: 77px;
+			padding: 10px;		
+		}		
+		nav#h_menu{
+			width: 610px;
+			height: 100px;
+			float: right;
+			text-align: right;
+			line-height: 100px;
+		}
+		nav#h_menu ul{
+			list-style: none;
+		}
+		nav#h_menu li{
+			display: inline-block;
+			margin: 0 30px;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: 'Raleway';
+		}
+		nav#h_menu a{
+			text-decoration: none;
+			color: black;
+		}
+		nav#h_menu a:hover{
+			border-bottom: 3px solid black;
+		}
+		
+		/* header>메인이미지+소개글 */		
+		div#intro_wrap{
+ 			width: 1350px;
+			height: 830px;
+			margin: 0 auto;
+		}
+		
+		/* → 메인이미지 */
+		div.main_img{
+			width: 675px;
+			height: 577px;
+			float: left;
+			padding-top: 250px;
+			
+		}
+		div.main_img img[src*='main_img1']{
+			width: 620px;
+			height: 430px;
+			margin-left: 45px;
+			margin-top: 10px;
+			/* opacity: 0; */
+			
+		}	
+		
+		/* → 메인소개글 */
+		div#main_text{
+			width: 610px;
+			height: 830px;
+			float: right;
+			text-align: left;
+		}
+		div#main_title{
+			width: 100%;
+			height: 200px;
+			padding-top: 290px;	
+		}
+		div#main_title h5{
+			width: 100%;
+			font-size: 15px;
+			font-family: 'Raleway';
+			letter-spacing: 2px;		
+		}
+		div#main_title h1{
+			width: 100%;
+			font-size: 73px;
+			font-family: 'Raleway';
+			font-weight: normal;
+			margin: 20px 0 0;
+		}
+				
+		div#main_intro{
+			width: 100%;
+		}
+		div#main_intro p{
+			width: 100%;
+			font-size: 18px;
+			padding-top: 30px;
+			font-family: 'Raleway';
+		}		
+		div#main_intro span{
+			font-size: 13px;
+		}		
+		div#view_more{
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+		}
+		div#view_more em{
+			font-weight: bold;
+			font-size: 18px;
+			font-family: 'Playfair Display';
+		}
+		div#view_more em a{
+			text-decoration: none;
+		}
+		
+		/** section **/		
+		section{
+			width: 100%;
+			text-align: center;
+		}
+		h1.main_name{
+			font-size: 40px;			
+		}
+		
+		/* section>about */
+		section div#about{
+			width: 100%;
+			height: 2450px;
+		}
+		section div#about div#about1{
+			width: 100%;
+			height: 640px;
+			padding-top: 100px;
+		}
+		section div#about div#about1 h1#slogan{
+			color: #2C2C2C;
+			text-align: center;
+			letter-spacing: 3px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			font-family: 'Raleway';
+		}
+		div#about1 ul.pointWrap{
+			width: 1050px;
+			margin: 0 auto;;
+		}
+		div#about1 ul.pointWrap li{
+			float: left;
+			margin-left: 30px;
+			position: relative;
+		}		
+		img.pointImg{
+			width: 180px;
+			height: 260px;
+		}
+		div.pointDummy{
+			background-color: rgba(0,0,0,0.5);
+			width: 180px;
+			height: 260px;
+			position: absolute;
+			left: 0;
+			top: 0;			
+		}
+		.pointDummy_Border{
+			background-color: none;
+			width: 180px;
+			height: 260px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 10px solid #F7EDAF;
+			margin: -10px;				
+		}
+		p.aboutInfo{
+			width: 1050px;
+			margin: 0 auto;
+			padding: 25px;
+			font-size: 17px;
+			line-height: 30px;
+			font-family: 'Raleway';
+		}			
+		section div#about div#about2{
+			width: 100%;
+			height: 1510px;
+			background-color: #f3f3f3;
+		}
+		section div#about div#about2 div.proStudy{
+			padding-top: 25px;
+		}
+		section div#about div#about2 div.proStudy img{
+			width: 200px;
+			height: 200px;	
+		}
+		div.lineWrap{
+			width: 100%;
+			text-align: center;
+		}
+		div.lineWrap span.line{
+			width: 1px;
+			height: 90px;
+			content: '';
+			display: inline-block;
+			margin: 15px auto;
+			border-left: 1px solid #888888;
+		}
+		div#about2 ul.img_btns{
+			width: 300px;
+			height: 50px;
+			margin: 0 auto;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		div#about2 ul.img_btns li.btnBox:first-child{
+			border-left-width: 1px;
+		}	
+		div#about2 ul.img_btns li.btnBox{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			color: #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 0px;
+		}
+		.btnBoxPoint_first{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 1px;
+					
+			color: #4C4C4C;
+			border-bottom: 3px solid #4C4C4C;
+			font-weight: bold;
+		}
+		.btnBoxPoint_etc{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 0px;
+					
+			color: #4C4C4C;
+			border-bottom: 3px solid #4C4C4C;
+			font-weight: bold;
+		}		
+		div.bxImgWrap{
+			width: 1110px;
+			height: 500px;
+			position: relative;
+			margin: 0 auto;
+		}
+		div.bxImgWrap li{
+			display: nonde;
+		}					
+		div.bxImgWrap img[src*='bx']{
+			width: 1110px;
+			height: 500px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}							
+		
+		/* section>project */
+		section div#projects{
+			width: 100%;
+			height: 1800px;			
+		}
+		section div#projects:hover div{
+			cursor: pointer;
+		}
+		section div#projects div.projects_container_A{
+			width: 1333px;
+			height: 838px;
+			margin: 0 auto;
+			margin-top: 40px;		
+			/* background-color: gray; */
+			position: relative;		
+		}
+		div.projects_container_A div{
+			margin: 22px;
+			float: left;
+			font-family: 'Raleway';
+		}
+		div.projects_container_A div.project_A{
+			width: 399px;
+			height: 500px;
+			transition: ease-in-out .15s;	
+		}
+		img#swingImg{
+			width: 280px;
+		}
+		div.project_swing{
+			/* background-color: #A0DCD0; */
+			background: url("../images/swingImg.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_jsp{
+			/* background-color: #F8F8F8; */
+			background: url("../images/jspImg.png") no-repeat;
+			background-size: cover;			
+		}								
+		div.project_A:hover .A_dummy{
+			opacity: 1;
+		}
+		div.project_A div.A_dummy{
+			width: 100%;
+			height: 500px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #FFA7A7 inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease; 
+		}
+		h3.project_title{
+			margin-top: 77px;
+			margin-bottom: 15px;
+			letter-spacing: 3px;
+			text-decoration: underline;	
+			font-size: 22px;	
+		}
+		p.project_text{
+			font-size: 14px;
+			padding: 25px;
+			font-weight: bold;
+		}
+		p.btns_info{
+			font-size: 12px;
+			padding: 15px;
+			font-weight: bold;
+			color: #FF8224;
+		}
+		p.btn{
+			line-height: 50px;
+		}
+		p.btn i.btn_info{
+			font-size: 12px;
+			margin-bottom: 3px;
+		}
+		p.btn a{
+			font-weight: bold;
+			border: 2px solid #FFA7A7;
+			border-radius: 5px;
+			padding: 5px;
+			color: #747474;
+			transition:1s all ease;	
+		}
+		p.btn a:hover{
+		    background-color: #FFA7A7;
+		    color: white;
+		}		
+		p.btn a:hover i:last-child{
+			color: #F15F5F;
+		}			
+		div.projects_container_A div.project_B{
+			width: 399px;
+			height: 250px;
+		}
+		div.B_boxTop{
+			/* background-color: #FEF4E8; */
+			background: url("../images/logo_01.png") no-repeat;
+			background-size: cover;	
+		}
+
+		div.B_boxLeft{
+			/* background-color: #F7EDAF; */
+			background: url("../images/logo_02.png") no-repeat;
+			background-size: cover;	
+		}
+		div.B_boxLeft .B_dummy{
+			background: url("../images/logo_06.png") no-repeat;
+			background-size: cover;			
+		}		
+		div.project_B:hover .B_dummy{
+			opacity: 1;
+		}
+		div.B_boxTop:hover img#goSpring,h2{
+			opacity: 0;
+		}		
+		div.project_B div.B_dummy{
+			width: 100%;
+			height: 250px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;		 	
+		}
+		div.project_B div.portfolio_info{
+			box-shadow: 0 0 0 10px #FAED7D inset;
+		}	
+		div.project_spring{
+			/* background-color: #D0E8E8; */
+			background: url("../images/springImg.png") no-repeat;
+			background-size: cover;	
+			position: absolute;
+			left: 33.3%;
+			top: 294px;
+		}
+		div.B_boxRight{
+			position: absolute;
+			left: 66.6%;
+			top: 544px;
+			/* background-color: #FBE5D7; */
+			background: url("../images/my_portfolio.png") no-repeat;
+			background-size: cover;
+		}
+		div.projects_container_B{
+			width: 1333px;
+			height: 600px;
+			margin: 0 auto;		
+			/* background-color: gray; */
+			position: relative;		
+		}
+		div.projects_container_B div{
+			margin: 22px;
+			float: left;
+		}		
+		div.projects_container_B div.project_C{
+			width: 399px;
+			height: 550px;
+		}
+		div.C_BoxLeft{
+			/* background-color: #F4EFE9; */
+			background: url("../images/github.png") no-repeat;
+			background-size: cover;
+		}
+		div.C_BoxRight{
+			/* background-color: #CCE4D4; */
+			background: url("../images/logo_04.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_C:hover .C_dummy{
+			opacity: 1;
+		}		
+		div.project_C div.C_dummy{
+			width: 100%;
+			height: 550px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;
+			font-family: 'Raleway';			 	
+		}
+		h3.project_title_git{
+			margin-top: 110px;
+		}
+		p.btns_info_git{
+			padding: 50px 0 50px 0;
+			font-size: 12px;
+			font-weight: bold;
+			color: #FF8224;			
+		}		
+		div.projects_container_B div.project_D{
+			width: 399px;
+			height: 250px;		
+		}
+		div.D_BoxTop{
+			/* background-color: #E2E2E2; */
+			background: url("../images/logo_05.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_D:hover .D_dummy{
+			opacity: 1;
+		}		
+		div.project_D div.D_dummy{
+			width: 100%;
+			height: 250px;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;			 	
+		}
+		div.project_D div.D_dummy_logo{
+			background: url("../images/logo_07.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_D div.D_dummy_name{
+			background: url("../images/logo_08.png") no-repeat;
+			background-size: cover;
+		}				
+		div.D_BoxBottom{
+			position: absolute;
+			left: 33.3%;
+			top: 300px;
+			/* background-color: #FED9BE;	 */
+			background: url("../images/logo_03.png") no-repeat;
+			background-size: cover;	
+		}
+		
+		/* section>contact */
+		section div#contact{
+			width: 100%;
+			height: 500px;
+			background-color: #f3f3f3;
+			padding: 230px 0 150px 0;	
+		}
+		
+		h3.email{
+			padding: 50px 0 50px 0;
+			color: #4C4C4C;
+			letter-spacing: 2px;
+			font-family: 'Raleway';
+		}
+		p.emailAdd{
+			color: #5D5D5D;
+			line-height: 30px;
+			font-family: 'Raleway';
+		}
+
+		
+		/** footer **/	
+		footer{
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			font-family: 'Raleway';
+			font-weight: bold;
+			color: #4C4C4C;
+			font-size: 14px;
+		}	
 	}
 		
 	/*** MOBILE ***/
 	@media screen and (max-width:640px){
+		#container{
+		width: 360%;
+	}
+	    /** header **/
+		header{
+			width: 100%;
+			height: 2400px;
+			background: url("../images/main_background.jpg") center no-repeat;
+			background-size: cover;		
+		}
+		
+		/* header>로고+메뉴 */
+		header div#head_wrap{
+			width: 100%;
+			height: 200px;
+			background: white;
+			position: fixed; /* 메뉴고정 */
+			left: 0;
+			top: 0;
+			z-index: 1; /* 최상위로 주기 */
+		}
+		
+		.sticky_header{
+			position: fixed;
+			left: 0;
+			top: 0;		
+		}
+		header div#h_head{
+			width: 1200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+		div#h_logo{
+			width: 420px;
+			float: left;		
+		}
+		div#h_logo img{
+			width: 360px;
+			height: 140px;
+			padding: 30px;		
+		}		
+		nav#h_menu{
+			width: 610px;
+			height: 100px;
+			float: right;
+			text-align: right;
+			line-height: 100px;
+		}
+		nav#h_menu ul{
+			list-style: none;
+		}
+		nav#h_menu li{
+			display: inline-block;
+			margin: 0 30px;
+			font-size: 16px;
+			font-weight: bold;
+			font-family: 'Raleway';
+		}
+		nav#h_menu a{
+			text-decoration: none;
+			color: black;
+		}
+		nav#h_menu a:hover{
+			border-bottom: 3px solid black;
+		}
+		
+		/* header>메인이미지+소개글 */		
+		div#intro_wrap{
+ 			width: 1040px;
+			height: 2490px;
+			margin: 0 auto;
+		}
+		
+		/* → 메인이미지 */
+		div.main_img{
+			padding-top: 250px;
+			
+		}
+		div.main_img img[src*='main_img1']{
+			width: 1030px;
+			height: 765px;
+			margin-top: 200px;
+			
+		}	
+		
+		/* → 메인소개글 */
+		div#main_text{
+			width: 990px;
+			height: 1100px;
+			margin: 0 auto;
+		}
+		div#main_title{
+			width: 100%;
+			height: 360px;
+			padding: 60px 0 60px 0;
+		}
+		div#main_title h5{
+			width: 100%;
+			font-size: 35px;
+			font-family: 'Raleway';
+			letter-spacing: 2px;		
+		}
+		div#main_title h1{
+			width: 100%;
+			font-size: 120px;
+			font-family: 'Raleway';
+			font-weight: normal;
+			margin: 40px 0 30px 0;
+		}
+				
+		div#main_intro{
+			width: 100%;
+		}
+		div#main_intro p{
+			width: 100%;
+			font-size: 45px;
+			padding-top: 20px;
+			font-family: 'Raleway';
+		}		
+		div#main_intro span{
+			font-size: 48px;
+		}		
+		div#view_more{
+			width: 100%;
+			height: 60px;
+			line-height: 60px;
+			padding-top: 40px;
+		}
+		div#view_more img{
+			width: 180px;
+			padding-right: 40px;
+			vertical-align: sub;
+		}
+		div#view_more em{
+			font-weight: bold;
+			font-size: 50px;
+			font-family: 'Playfair Display';
+		}
+		div#view_more em a{
+			text-decoration: none;
+		}
+		
+		/** section **/		
+		section{
+			width: 100%;
+			text-align: center;
+		}
+		h1.main_name{
+			font-size: 40px;			
+		}
+		
+		/* section>about */
+		section div#about{
+			width: 100%;
+			height: 2450px;
+		}
+		section div#about div#about1{
+			width: 100%;
+			height: 640px;
+			padding-top: 100px;
+		}
+		section div#about div#about1 h1#slogan{
+			color: #2C2C2C;
+			text-align: center;
+			letter-spacing: 3px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			font-family: 'Raleway';
+		}
+		div#about1 ul.pointWrap{
+			width: 1050px;
+			margin: 0 auto;;
+		}
+		div#about1 ul.pointWrap li{
+			float: left;
+			margin-left: 30px;
+			position: relative;
+		}		
+		img.pointImg{
+			width: 180px;
+			height: 260px;
+		}
+		div.pointDummy{
+			background-color: rgba(0,0,0,0.5);
+			width: 180px;
+			height: 260px;
+			position: absolute;
+			left: 0;
+			top: 0;			
+		}
+		.pointDummy_Border{
+			background-color: none;
+			width: 180px;
+			height: 260px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 10px solid #F7EDAF;
+			margin: -10px;				
+		}
+		p.aboutInfo{
+			width: 1050px;
+			margin: 0 auto;
+			padding: 25px;
+			font-size: 17px;
+			line-height: 30px;
+			font-family: 'Raleway';
+		}			
+		section div#about div#about2{
+			width: 100%;
+			height: 1510px;
+			background-color: #f3f3f3;
+		}
+		section div#about div#about2 div.proStudy{
+			padding-top: 25px;
+		}
+		section div#about div#about2 div.proStudy img{
+			width: 200px;
+			height: 200px;	
+		}
+		div.lineWrap{
+			width: 100%;
+			text-align: center;
+		}
+		div.lineWrap span.line{
+			width: 1px;
+			height: 90px;
+			content: '';
+			display: inline-block;
+			margin: 15px auto;
+			border-left: 1px solid #888888;
+		}
+		div#about2 ul.img_btns{
+			width: 300px;
+			height: 50px;
+			margin: 0 auto;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		div#about2 ul.img_btns li.btnBox:first-child{
+			border-left-width: 1px;
+		}	
+		div#about2 ul.img_btns li.btnBox{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			color: #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 0px;
+		}
+		.btnBoxPoint_first{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 1px;
+					
+			color: #4C4C4C;
+			border-bottom: 3px solid #4C4C4C;
+			font-weight: bold;
+		}
+		.btnBoxPoint_etc{
+			width: 56px;
+			height: 50px;
+			border: 1px solid #ADADAD;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			border-left-width: 0px;
+					
+			color: #4C4C4C;
+			border-bottom: 3px solid #4C4C4C;
+			font-weight: bold;
+		}		
+		div.bxImgWrap{
+			width: 1110px;
+			height: 500px;
+			position: relative;
+			margin: 0 auto;
+		}
+		div.bxImgWrap li{
+			display: nonde;
+		}					
+		div.bxImgWrap img[src*='bx']{
+			width: 1110px;
+			height: 500px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}							
+		
+		/* section>project */
+		section div#projects{
+			width: 100%;
+			height: 1800px;			
+		}
+		section div#projects:hover div{
+			cursor: pointer;
+		}
+		section div#projects div.projects_container_A{
+			width: 1333px;
+			height: 838px;
+			margin: 0 auto;
+			margin-top: 40px;		
+			/* background-color: gray; */
+			position: relative;		
+		}
+		div.projects_container_A div{
+			margin: 22px;
+			float: left;
+			font-family: 'Raleway';
+		}
+		div.projects_container_A div.project_A{
+			width: 399px;
+			height: 500px;
+			transition: ease-in-out .15s;	
+		}
+		img#swingImg{
+			width: 280px;
+		}
+		div.project_swing{
+			/* background-color: #A0DCD0; */
+			background: url("../images/swingImg.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_jsp{
+			/* background-color: #F8F8F8; */
+			background: url("../images/jspImg.png") no-repeat;
+			background-size: cover;			
+		}								
+		div.project_A:hover .A_dummy{
+			opacity: 1;
+		}
+		div.project_A div.A_dummy{
+			width: 100%;
+			height: 500px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #FFA7A7 inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease; 
+		}
+		h3.project_title{
+			margin-top: 77px;
+			margin-bottom: 15px;
+			letter-spacing: 3px;
+			text-decoration: underline;	
+			font-size: 22px;	
+		}
+		p.project_text{
+			font-size: 14px;
+			padding: 25px;
+			font-weight: bold;
+		}
+		p.btns_info{
+			font-size: 12px;
+			padding: 15px;
+			font-weight: bold;
+			color: #FF8224;
+		}
+		p.btn{
+			line-height: 50px;
+		}
+		p.btn i.btn_info{
+			font-size: 12px;
+			margin-bottom: 3px;
+		}
+		p.btn a{
+			font-weight: bold;
+			border: 2px solid #FFA7A7;
+			border-radius: 5px;
+			padding: 5px;
+			color: #747474;
+			transition:1s all ease;	
+		}
+		p.btn a:hover{
+		    background-color: #FFA7A7;
+		    color: white;
+		}		
+		p.btn a:hover i:last-child{
+			color: #F15F5F;
+		}			
+		div.projects_container_A div.project_B{
+			width: 399px;
+			height: 250px;
+		}
+		div.B_boxTop{
+			/* background-color: #FEF4E8; */
+			background: url("../images/logo_01.png") no-repeat;
+			background-size: cover;	
+		}
+
+		div.B_boxLeft{
+			/* background-color: #F7EDAF; */
+			background: url("../images/logo_02.png") no-repeat;
+			background-size: cover;	
+		}
+		div.B_boxLeft .B_dummy{
+			background: url("../images/logo_06.png") no-repeat;
+			background-size: cover;			
+		}		
+		div.project_B:hover .B_dummy{
+			opacity: 1;
+		}
+		div.B_boxTop:hover img#goSpring,h2{
+			opacity: 0;
+		}		
+		div.project_B div.B_dummy{
+			width: 100%;
+			height: 250px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;		 	
+		}
+		div.project_B div.portfolio_info{
+			box-shadow: 0 0 0 10px #FAED7D inset;
+		}	
+		div.project_spring{
+			/* background-color: #D0E8E8; */
+			background: url("../images/springImg.png") no-repeat;
+			background-size: cover;	
+			position: absolute;
+			left: 33.3%;
+			top: 294px;
+		}
+		div.B_boxRight{
+			position: absolute;
+			left: 66.6%;
+			top: 544px;
+			/* background-color: #FBE5D7; */
+			background: url("../images/my_portfolio.png") no-repeat;
+			background-size: cover;
+		}
+		div.projects_container_B{
+			width: 1333px;
+			height: 600px;
+			margin: 0 auto;		
+			/* background-color: gray; */
+			position: relative;		
+		}
+		div.projects_container_B div{
+			margin: 22px;
+			float: left;
+		}		
+		div.projects_container_B div.project_C{
+			width: 399px;
+			height: 550px;
+		}
+		div.C_BoxLeft{
+			/* background-color: #F4EFE9; */
+			background: url("../images/github.png") no-repeat;
+			background-size: cover;
+		}
+		div.C_BoxRight{
+			/* background-color: #CCE4D4; */
+			background: url("../images/logo_04.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_C:hover .C_dummy{
+			opacity: 1;
+		}		
+		div.project_C div.C_dummy{
+			width: 100%;
+			height: 550px;
+			background-color: white;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;
+			font-family: 'Raleway';			 	
+		}
+		h3.project_title_git{
+			margin-top: 110px;
+		}
+		p.btns_info_git{
+			padding: 50px 0 50px 0;
+			font-size: 12px;
+			font-weight: bold;
+			color: #FF8224;			
+		}		
+		div.projects_container_B div.project_D{
+			width: 399px;
+			height: 250px;		
+		}
+		div.D_BoxTop{
+			/* background-color: #E2E2E2; */
+			background: url("../images/logo_05.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_D:hover .D_dummy{
+			opacity: 1;
+		}		
+		div.project_D div.D_dummy{
+			width: 100%;
+			height: 250px;
+			margin: 0;
+			padding: 0;
+			box-shadow: 0 0 0 10px #eee inset; /* div안쪽에 border주기 */
+			opacity: 0;
+			transition:1s all ease;			 	
+		}
+		div.project_D div.D_dummy_logo{
+			background: url("../images/logo_07.png") no-repeat;
+			background-size: cover;
+		}
+		div.project_D div.D_dummy_name{
+			background: url("../images/logo_08.png") no-repeat;
+			background-size: cover;
+		}				
+		div.D_BoxBottom{
+			position: absolute;
+			left: 33.3%;
+			top: 300px;
+			/* background-color: #FED9BE;	 */
+			background: url("../images/logo_03.png") no-repeat;
+			background-size: cover;	
+		}
+		
+		/* section>contact */
+		section div#contact{
+			width: 100%;
+			height: 500px;
+			background-color: #f3f3f3;
+			padding: 230px 0 150px 0;	
+		}
+		
+		h3.email{
+			padding: 50px 0 50px 0;
+			color: #4C4C4C;
+			letter-spacing: 2px;
+			font-family: 'Raleway';
+		}
+		p.emailAdd{
+			color: #5D5D5D;
+			line-height: 30px;
+			font-family: 'Raleway';
+		}
+
+		
+		/** footer **/	
+		footer{
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			font-family: 'Raleway';
+			font-weight: bold;
+			color: #4C4C4C;
+			font-size: 14px;
+		}	
 	}
