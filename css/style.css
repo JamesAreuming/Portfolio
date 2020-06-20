@@ -1178,7 +1178,7 @@
 	/*** MOBILE ***/
 	@media screen and (max-width:640px){
 		#container{
-		width: 360%;
+		width: 100%;
 	}
 	    /** header **/
 		header{
